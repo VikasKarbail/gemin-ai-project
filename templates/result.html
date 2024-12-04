@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prediction Result</title>
+</head>
+<body>
+    <h1>Prediction Result</h1>
+
+    {% if prediction == 0 %}
+        <h2 style="color: green;">Good news! No heart disease detected.</h2>
+    {% else %}
+        <h2 style="color: red;">Warning: Heart disease detected. Consult a healthcare professional.</h2>
+    {% endif %}
+
+    <p>Model Accuracy: {{ accuracy }}%</p>
+    <h3>Recommendations:</h3>
+    <p>{{ recommendations }}</p>
+
+    <a href="/">Go Back</a>
+</body>
+</html>
